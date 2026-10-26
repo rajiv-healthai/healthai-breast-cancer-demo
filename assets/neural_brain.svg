@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="620" viewBox="0 0 920 620" fill="none">
+<defs>
+ <radialGradient id="aura"><stop stop-color="#55ddcf" stop-opacity=".34"/><stop offset="1" stop-color="#55ddcf" stop-opacity="0"/></radialGradient>
+ <linearGradient id="glass" x1="250" y1="90" x2="650" y2="540" gradientUnits="userSpaceOnUse"><stop stop-color="#dbfff2" stop-opacity=".34"/><stop offset=".45" stop-color="#74ddd4" stop-opacity=".19"/><stop offset="1" stop-color="#9b9bec" stop-opacity=".3"/></linearGradient>
+ <linearGradient id="rightGlass" x1="500" y1="100" x2="690" y2="520" gradientUnits="userSpaceOnUse"><stop stop-color="#f3d9e5" stop-opacity=".26"/><stop offset=".5" stop-color="#86a9dc" stop-opacity=".22"/><stop offset="1" stop-color="#ffad9b" stop-opacity=".32"/></linearGradient>
+ <linearGradient id="wire"><stop stop-color="#71e1d1"/><stop offset="1" stop-color="#ffad9c"/></linearGradient>
+ <filter id="halo" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="20"/></filter>
+ <filter id="glow"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+ <style>
+ @keyframes drift{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+ @keyframes orbit{to{transform:rotate(360deg)}}
+ @keyframes shimmer{0%,100%{opacity:.72}50%{opacity:1}}
+ .brain{transform-origin:460px 310px;animation:drift 9s ease-in-out infinite}
+ .orbit{transform-origin:460px 310px;animation:orbit 58s linear infinite}
+ .orbit2{transform-origin:460px 310px;animation:orbit 72s linear infinite reverse}
+ .node{animation:shimmer 3.6s ease-in-out infinite}
+ @media(prefers-reduced-motion:reduce){.brain,.orbit,.orbit2,.node{animation:none!important}}
+ </style>
+</defs>
+<ellipse cx="460" cy="310" rx="390" ry="290" fill="url(#aura)" filter="url(#halo)"/>
+<g opacity=".52" stroke="#86e9df"><ellipse class="orbit" cx="460" cy="310" rx="360" ry="145" stroke-dasharray="2 12"/><ellipse class="orbit2" cx="460" cy="310" rx="316" ry="210" stroke-dasharray="2 15" stroke="#f7a99d"/></g>
+<g class="brain">
+ <path d="M456 111c-30-38-91-45-127-20-33-9-67 13-69 47-35 13-47 51-28 81-26 28-16 68 14 86-12 34 12 67 47 70 11 33 47 49 80 34 25 23 61 20 82-4l1-294Z" fill="url(#glass)" stroke="#a8efe5" stroke-opacity=".78" stroke-width="2"/>
+ <path d="M464 111c30-38 91-45 127-20 33-9 67 13 69 47 35 13 47 51 28 81 26 28 16 68-14 86 12 34-12 67-47 70-11 33-47 49-80 34-25 23-61 20-82-4l-1-294Z" fill="url(#rightGlass)" stroke="#ffc1b0" stroke-opacity=".7" stroke-width="2"/>
+ <g fill="none" stroke="#d1fff5" stroke-opacity=".82" stroke-width="3" stroke-linecap="round">
+  <path d="M286 178c13-26 47-28 62-7 13 19-3 39-22 43-20 5-38-9-40-27m-28 62c15-21 47-15 52 7 3 17-10 30-27 30m80-124c-5 27 11 37 31 34 18-3 25-23 19-39m-31 106c-16-20-45-15-50 7-4 16 9 27 23 29m-5 67c-14-22-39-22-53-5m103-30c-8 23-36 29-54 14m76-109c16-16 41-11 46 9 5 17-10 28-26 27m-17 52c16-16 43-11 49 7"/>
+ </g>
+ <g fill="none" stroke="#ffd0c4" stroke-opacity=".78" stroke-width="2.7" stroke-linecap="round">
+  <path d="M636 171c-15-23-45-19-53 3-6 18 10 32 26 33m62 49c-19-20-48-12-52 11-3 16 12 28 27 26m-72-124c6 25-12 36-31 30-18-5-23-24-16-39m29 104c16-18 43-13 48 8m-10 73c15-19 41-15 52 3m-102-31c4 22 31 31 52 16m-52-108c-18-15-41-7-45 14-2 16 13 25 27 22"/>
+ </g>
+ <!-- fine axon connections cross the translucent hemispheres -->
+ <g fill="none" stroke="url(#wire)" stroke-opacity=".74" stroke-width="1.6">
+  <path d="m285 176 49 39 59-30 59 52 55-46 58 24 67-44M258 278l67 3 31 53 76-20 55 49 59-25 72 25M297 358l55-23 42 60 62-30 54 54 57-55 54 25M334 153v62m59-30v92m59-40v99m55-145v85m58-60-11 66m-184 109 48-63m56 32 8-58m52 112-5-59"/>
+ </g>
+ <g fill="#c6fff4" filter="url(#glow)">
+  <circle class="node" cx="285" cy="176" r="5"/><circle class="node" cx="393" cy="185" r="5"/><circle class="node" cx="452" cy="237" r="5"/><circle class="node" cx="565" cy="215" r="5"/><circle class="node" cx="652" cy="180" r="5"/><circle class="node" cx="325" cy="281" r="5"/><circle class="node" cx="356" cy="334" r="5"/><circle class="node" cx="432" cy="314" r="5"/><circle class="node" cx="489" cy="363" r="5"/><circle class="node" cx="548" cy="338" r="5"/><circle class="node" cx="607" cy="363" r="5"/><circle class="node" cx="396" cy="395" r="4"/><circle class="node" cx="510" cy="417" r="4"/><circle class="node" cx="567" cy="362" r="5"/>
+ </g>
+</g>
+<g fill="#c8fff6"><circle cx="190" cy="201" r="3" opacity=".65"/><circle cx="722" cy="278" r="3" opacity=".75"/><circle cx="226" cy="433" r="2.5" opacity=".65"/><circle cx="705" cy="420" r="3" opacity=".7"/></g>
+</svg>
